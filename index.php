@@ -39,7 +39,7 @@ $controller = new Controller();
             });
 
             $("body").on("click", "button.btn-set-filter", function () {
-                    window.location = "?arquived="+$("select[name=arquived]").val()+"&private="+$("select[name=private]").val()+<?=(isset($_GET['sort']) ?
+                    window.location = "<?=$_SERVER['remote_addr';?>?arquived="+$("select[name=arquived]").val()+"&private="+$("select[name=private]").val()+<?=(isset($_GET['sort']) ?
                     "'&sort=".$_GET['sort']."&order=".$_GET['order']."'\n" : "");?>;
             });
         })
