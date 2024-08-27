@@ -1,0 +1,221 @@
+/* assets/css/style.css */
+
+/* Reseta margens e preenchimentos padrão e define a altura para o body e html */
+html, body {
+    font-family: Inter;
+    background-color: #f0f1f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Contêiner principal que centraliza o conteúdo e define a largura máxima */
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 60px;
+    position: relative;
+    justify-content: space-between;
+}
+
+/* Estiliza o logo, pode adicionar uma imagem ou ícone aqui */
+/* width="120" height="48" */
+.logo {
+    position: absolute;
+    left: 0px;
+    top: 40px;
+    width: 80px;
+    height: 48px; 
+}
+
+/* Contêiner principal do corpo */
+.container-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* Estilo para o texto e botões abaixo do textarea */
+.container-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 80px;
+    margin-right: 100px;
+    height: 944px;
+    justify-content: space-between;
+}
+
+
+/* Estiliza o textarea para preencher o espaço disponível */
+.container-body .decoficator {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.container-body .decoficator textarea {
+    width: 100%;
+    height: 100%;
+    min-height: 30vh;
+    min-width: 500px;
+    padding: 10px;
+    border: 0px solid #ddd;
+    border-radius: 8px;
+    resize:none;
+/* 
+    width: 680px; */
+    font-size: 24px;
+    line-height: 150%;
+    font-family: Inter;
+    color: #66029e;
+    text-align: left;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.container-body div {
+    display: flex;
+    flex-direction: column;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+    gap:10px
+}
+
+.container-body div span {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.container-body div > div.container-btn {
+    display: flex;
+    flex-direction: row;
+    gap:40px
+}
+
+.container-body div div.container-btn > button {
+    width: 100%;
+    border-radius: 24px;
+    border: 1px solid #333;
+    background-color: #9412dc;
+    padding: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    text-align: center !important;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-family: Inter;
+}
+
+.container-body div div.container-btn > button.light {
+    background-color: #f5ebfa;
+    border: 1px solid #9412dc;
+    color: #9412dc;
+}
+
+.container-body div div.container-btn > button:hover {
+    background: #68089c;
+    transform: scale(1.05);
+    color:white;
+    font-family: Inter;
+    cursor: pointer;
+}
+
+/* Estiliza a seção de resultados */
+.container-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;    
+    height: 944px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    background-color: #fff;
+    justify-content: center;
+}
+
+.result {
+    height: 100%;
+    padding: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.result.hidden, .no-result.hidden {
+    display: none !important;
+}
+
+.result h3 {
+    margin: 0;
+}
+
+.result button {
+    width: 100%;
+    border-radius: 24px;
+    border: 1px solid #9412dc;
+    background-color: white;
+    padding: 24px;
+    text-align: center;
+    font-size: 16px;
+    color: #9412dc;
+    text-align: center !important;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-family: Inter;
+}
+
+.result button:hover {
+    transform: scale(1.05);
+    background-color: #9412dc;
+    border: 1px solid #9412dc;
+    color: white;
+    cursor:pointer;
+}
+
+.no-result {
+    text-align: center;
+}
+
+.no-result h4 {
+    margin: 0;
+}
+
+.no-result p {
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .container-body {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .container-body > div {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .container-body div > button {
+        width: 100%;
+    }
+}
