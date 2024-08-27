@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputText = document.getElementById('inputText');
     const resultTitle = document.getElementById('resultTitle');
     const noResult = document.getElementById('noResult');
+    const getResult = document.getElementById('get-result');
 
     const encryptText = (text) => {
         return text
@@ -28,10 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateResult = (text) => {
         if (text) {
             resultTitle.textContent = text;
-            noResult.style.display = 'none';
+            noResult.classList.add("hidden")
+            getResult.classList.remove("hidden")
         } else {
             resultTitle.textContent = 'Nenhuma mensagem encontrada';
-            noResult.style.display = 'block';
+            getResult.classList.add("hidden")
+            noResult.classList.remove("hidden")
         }
     };
 
