@@ -98,9 +98,13 @@ html, body {
 }
 
 .container-body div span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     color: #666;
     font-size: 14px;
     margin-bottom: 20px;
+    gap: 10px;
 }
 
 .container-body div > div.container-btn {
